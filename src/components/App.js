@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import "../styles/App.css";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import Button from "material-ui/Button";
-import AppBar from "material-ui/AppBar";
 import firebase from "firebase";
 import firebaseui from "firebaseui";
+
+import Header from './Header';
 
 firebase.initializeApp({
   apiKey: "AIzaSyAQPIoN8G0GV9hYd1mN30Y6mKjFLGQhnqA",
@@ -18,14 +16,9 @@ firebase.initializeApp({
 class App extends Component {
   render() {
     return (
-      <MuiThemeProvider>
-        <div>
-          <AppBar style={{ position: "relative", padding: 10 }}>
-            Globe Hackathon
-          </AppBar>
-          <Button>Hello</Button>
-        </div>
-      </MuiThemeProvider>
+      <div>
+        <Header/>
+      </div>
     );
   }
 }
