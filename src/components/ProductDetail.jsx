@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { compose } from "redux";
+import {Link} from 'react-router-dom'
 import {
   firebaseConnect,
   dataToJS
@@ -83,7 +84,10 @@ class ProductDetail extends Component {
               </div>
             </div>
           </div>
-          <div className="col-md-3">Add cart here...</div>
+          <div className="col-md-3">
+            Add cart here...
+            <Link to="/cart">Go to Cart</Link>
+          </div>
         </div>
       </div>
     );

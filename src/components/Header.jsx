@@ -37,7 +37,7 @@ class Header extends Component {
                     <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <Link to="/">Catalogue</Link>
+                    <Link to="/crops">Catalogue</Link>
                   </li>
                   <li>
                     <a href="/">Page 2</a>
@@ -53,7 +53,7 @@ class Header extends Component {
                   <span className="hamburger-box">
                     <span className="hamburger-inner"></span>
                   </span>
-                </button> 
+                </button>
               </div>
             )}
           </Media>
