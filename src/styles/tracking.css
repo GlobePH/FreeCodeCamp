@@ -1,4 +1,24 @@
 .tracking-purchase {
-  height: 600px;
-  width: 50%;
+  padding-top: 110px;
+  padding-bottom: 60px;
+}
+.tracking-map-wrapper{
+  height: 500px;
+}
+.tracking-map-wrapper > div {
+  border: 1px solid #ccc;
+}
+.tracking-contents {
+  min-height: 400px;
+  background: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 30px 15px;
+  margin-top: 0px;
+}
+.tracking-contents h3{
+  margin-top: 0;
+}
+.tracking-contents hr{
+  border-color: #ccc; 
 }

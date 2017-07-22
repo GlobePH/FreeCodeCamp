@@ -33,17 +33,29 @@ class ConfirmPurchase extends Component {
   }
   render () {
     return (
-      <div className='tracking-purchase'>
-        <Tracking
-          containerElement={
-            <div style={{ height: `100%` }} />
-          }
-          mapElement={
-            <div style={{ height: `100%` }} />
-          }
-          center={this.state.origin}
-          directions={this.state.directions}
-        />
+      <div className='tracking-purchase container'>
+        <div className="row">
+          <div className="col-sm-8 tracking-map-wrapper">
+            <Tracking
+              containerElement={
+                <div style={{ height: `100%` }} />
+              }
+              mapElement={
+                <div style={{ height: `100%` }} />
+              }
+              center={this.state.origin}
+              directions={this.state.directions}
+            />
+          </div>
+          <div className="col-sm-4 tracking-details-wrapper">
+            <div className="tracking-contents">
+              <h3>Shipment Tracking</h3>
+              <hr/>
+            </div>
+            
+          </div>
+        </div>
+        
       </div>
     )
   }
