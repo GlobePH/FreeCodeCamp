@@ -19,5 +19,8 @@
     "build": "node ./node_modules/react-scripts/bin/react-scripts build",
     "test": "node ./node_modules/react-scripts/bin/react-scripts test --env=jsdom",
     "eject": "node ./node_modules/react-scripts/bin/react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1"
   }
 }
