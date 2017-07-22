@@ -12,7 +12,11 @@ const DEFAULT_STATE = {
 
 const loginReducer = (state = DEFAULT_STATE, action) => {
   if (action.type === LOG_IN) {
-    return true;
+    return {
+      authenticated: true
+    }
+  } else {
+    return state
   }
 }
 
