@@ -1,31 +1,33 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { compose } from "redux";
-import {Link} from 'react-router-dom'
-import {
-  firebaseConnect,
-  dataToJS
-} from "react-redux-firebase";
+import { Link } from "react-router-dom";
+import { firebaseConnect, dataToJS } from "react-redux-firebase";
 import _ from "lodash";
 
-import * as action from '../actions/cart'
-
+import * as action from "../actions/cart";
+import Cart from "./Cart";
 
 class ProductDetail extends Component {
   state = {
     quantity: 0,
     name: "" || this.props.match.params.id
-  }
+  };
 
-  handleInputChange = (e) => {
-    e.preventDefault()
-    this.setState({ quantity: e.target.value })
-  }
+  handleInputChange = e => {
+    e.preventDefault();
+    this.setState({ quantity: e.target.value });
+  };
 
-  addToCart = (e) => {
-    e.preventDefault()
-    this.props.addItem(this.state.name, this.state.quantity, this.state.lat, this.state.lng)
-  }
+  addToCart = e => {
+    e.preventDefault();
+    this.props.addItem(
+      this.state.name,
+      this.state.quantity,
+      this.state.lat,
+      this.state.lng
+    );
+  };
 
   render() {
     let cropIndex;
@@ -43,7 +45,8 @@ class ProductDetail extends Component {
           <div className="row">
             <div className="col-md-9">
               <div className="row">
-                <div className="col-md-5">/
+                <div className="col-md-5">
+                  /
                   <div className="product-detail-image">
                     <img
                       src={this.props.crops[cropIndex].imgURL}
@@ -73,10 +76,9 @@ class ProductDetail extends Component {
                         className="form-control"
                         value={this.state.quantity}
                       />
-                      <button
-                        type="submit"
-                        className="btn btn-primary"
-                      >Add to Cart </button>
+                      <button type="submit" className="btn btn-primary">
+                        Add to Cart{" "}
+                      </button>
                     </div>
                   </form>
                 </div>
@@ -85,8 +87,12 @@ class ProductDetail extends Component {
           </div>
           <div className="col-md-3">
             Add cart here...
-            <Link to="/cart">Go to Cart</Link>
-            <Link to="/crops">Back to Shop</Link>
+            <div>
+              <Link to="/cart">Go to Cart</Link>
+            </div>
+            <div>
+              <Link to="/crops">Back to Shop</Link>
+            </div>
           </div>
         </div>
       </div>
@@ -94,11 +100,11 @@ class ProductDetail extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   name: state.name,
   quantity: state.quantity,
-  crops: dataToJS(state.firebase, 'crops')
-})
+  crops: dataToJS(state.firebase, "crops")
+});
 
 export default compose(
   firebaseConnect(["crops"]),
