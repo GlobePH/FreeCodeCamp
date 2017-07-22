@@ -9,10 +9,6 @@ import Landing from './Landing'
 import ProductIndex from './ProductIndex'
 import ProductDetail from './ProductDetail'
 import Cart from './Cart'
-import Header from './Header'
-import Login from './Login'
-import Landing from './Landing'
-import ProductIndex from './ProductIndex';
 import ConfirmPurchase from './ConfirmPurchase';
 
 import "../styles/index.css";

@@ -50,10 +50,10 @@ class ConfirmPurchase extends Component {
       <div style={{ height: '600px' }}>
         <SellerCustomerMap
           containerElement={
-          <div style={{ height: '600px' }} />
+          <div style={{ height: '100%' }} />
         }
           mapElement={
-          <div style={{ height: '600px' }} />
+          <div style={{ height: '100%' }} />
         }
         onMapLoad={this.handleMapLoad}
         onMapClick={this.handleMapClick}
