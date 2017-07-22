@@ -8,7 +8,11 @@ class Login extends Component {
   constructor(props) {
     super(props);
     fbAuth.onAuthStateChanged(user => {
-      user ? props.dispatch(loginAction()) : console.error("Not logged in");
+      if (user) {
+        console.log("MAH USER IZ", user);
+      } else {
+        console.log("NO USER. SAD.");
+      }
     });
     this.state = {
       userEmail: "",
@@ -24,11 +28,12 @@ class Login extends Component {
     this.setState({ userPass: e.target.value });
   }
 
-  handleLogin() {
-    fbAuth.signInWithEmailAndPassword(
-      this.state.userEmail,
-      this.state.userPass
-    );
+  handleLogin(e) {
+    e.preventDefault();
+    fbAuth
+      .signInWithEmailAndPassword(this.state.userEmail, this.state.userPass)
+      .then(() => this.props.dispatch(loginAction()))
+      .catch(error => console.error(error));
   }
 
   render() {
