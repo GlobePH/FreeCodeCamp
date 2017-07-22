@@ -15,9 +15,8 @@ const loginReducer = (state = DEFAULT_STATE, action) => {
     return {
       authenticated: true
     }
-  } else {
-    return state
   }
+  return state
 }
 
 export default loginReducer
