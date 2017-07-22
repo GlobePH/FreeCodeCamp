@@ -63,7 +63,7 @@ class Header extends Component {
                     <span className="hamburger-inner"></span>
                   </span>
                 </button>
-                <div className="mmenu-overlay"></div>
+                <div className={mmenuOpen ? 'mmenu-overlay open' : 'mmenu-overlay'} onClick={this.handleHamburgerClick.bind(this)}></div>
                 <div className={mmenuOpen ? 'mmenu open' : 'mmenu'}>
                   <p className="mmnenu-close" onClick={this.handleHamburgerClick.bind(this)}>&times;</p>
                   <ul className="mmenu-list">
