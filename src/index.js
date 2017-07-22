@@ -1,10 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./styles/index.css";
-import Login from "./components/Login";
+import App from "./components/App";
+import { BrowserRouter } from 'react-router-dom';
 import registerServiceWorker from "./utils/registerServiceWorker";
+
+import "./styles/index.css";
 
 // Material-UI temporary dependency
 
-ReactDOM.render(<Login />, document.getElementById("root"));
+ReactDOM.render(
+  <BrowserRouter>
+    <App/>
+  </BrowserRouter>, 
+  document.getElementById("root")
+);
 registerServiceWorker();
