@@ -8,16 +8,18 @@ import Login from "./Login";
 import Landing from "./Landing";
 import ProductIndex from "./ProductIndex";
 import ProductDetail from './ProductDetail';
+import Cart from './Cart'
 
 const App = () =>
   <Provider store={store}>
     <div>
       <Header />
+      <Cart/>
       <Switch>
         <Route path="/" exact component={Landing} />
         <Route path="/login" component={Login} />
-        <Route path="/crops" component={ProductIndex} />
-        <Route path='/product/:id' component={ProductDetail} />
+        <Route path="/crops" exact component={ProductIndex} />
+        <Route path='/crops/:id' component={ProductDetail} />
       </Switch>
     </div>
   </Provider>;
