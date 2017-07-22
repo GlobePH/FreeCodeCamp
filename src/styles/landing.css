@@ -4,6 +4,7 @@
     background-image: url(./assets/pexels-photo-95425.jpeg);
     background-size: cover;
     background-position: top center;
+    background-attachment: fixed;
     position: relative;
     display: flex;
     align-items: center;
@@ -31,6 +32,16 @@
     font-size: 45px;
     text-shadow: 2px 2px 5px #000;
 }
+.home-banner .text-content{
+    width: 700px;
+    max-width: 100%;
+    margin: 35px 0
+}
+.home-banner .text-content p{
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.5em;
+}
 .shop-link {
     border-radius: 50px;
     line-height: 2.5em;
@@ -38,6 +49,15 @@
     background-color: #00d1b2;
     border: 2px solid #00d1b2;
     font-size: 20px;
+}
+.shop-link .fa {
+    opacity: 0;
+    margin-left: -.5em;
+    transition: all .4s ease-out;
+}
+.shop-link:hover .fa {
+    opacity: 1;
+    margin-left: .5em;
 }
 .shop-link:hover {
     background-color: #0abfa4;
