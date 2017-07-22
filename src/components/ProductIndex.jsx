@@ -1,43 +1,56 @@
 import React, { Component } from 'react'
-import { fbDatabase } from '../fire'
+import { connect } from 'react-redux'
+import { compose } from 'redux'
+import {
+  firebaseConnect,
+  isLoaded,
+  isEmpty,
+  dataToJS
+} from 'react-redux-firebase'
+
 import ProductItem from './ProductItem'
 import '../styles/productIndex.css'
 
+class ProductIndex extends Component {
+  render () {
+    const {crops} = this.props
 
-export default class ProductIndex extends Component {
-  state = {
-    crops: []
-  };
-
-  componentWillMount() {
-    fbDatabase.ref("crops").on("value", snap => {
-      console.log(snap.val());
-      this.setState({ crops: snap.val() });
-      return false;
-    });
-  }
-
-  render() {
+    const cropsList = !isLoaded(crops)
+      ? 'Loading'
+      : isEmpty(crops)
+        ? 'Crops list empty'
+        : Object.keys(crops).map((key, id) => (
+          <ProductItem
+            key={crops[id].id}
+            name={crops[id].name}
+            imgURL={crops[id].imgURL}
+            quantity={crops[id].quantity}
+          />
+        ))
     return (
       <div className="ProductIndex">
         <div className="container">
           <div className="row">
             <div className="col-sm-9">
               <div className="row">
-                {this.state.crops.map(crop =>
-                  <ProductItem
-                    key={crop.id}
-                    name={crop.name}
-                    imgURL={crop.imgURL}
-                    quantity={crop.quantity}
-                  />
-                )}
+                {cropsList}
               </div>
             </div>
             <div className="col-sm-3">Add cart here...</div>
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
+
+export default compose(
+  firebaseConnect([
+    'crops'
+  ]),
+  connect(
+    ({firebase}) => ({
+      crops: dataToJS(firebase, 'crops'),
+    })
+  )
+)(ProductIndex)

@@ -12,19 +12,19 @@ class Cart extends Component {
   render () {
     const {crops} = this.props
 
-    console.log(this.props)
     const cropsList = !isLoaded(crops)
       ? 'Loading'
-      : isEmpty(crops``)
+      : isEmpty(crops)
         ? 'Todo list is empty'
         : Object.keys(crops).map((key, id) => (
-            <p>crop</p>
+            <div>
+              <p>{crops[id].name}</p>
+              <p>{crops[id].quantity}</p>
+            </div>
           )
         )
     return (
-      <div>
-        <h1>{cropsList}</h1>
-      </div>
+      <div>{cropsList}</div>
     )
   }
 }

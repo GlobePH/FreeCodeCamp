@@ -24,7 +24,9 @@ export default class ProductDetail extends Component {
                         <input type="number" className="form-control" />
                       </div>
                     </form>
-                    <a href="#" className="btn btn-primary">Add to Cart</a>
+                    <form>
+                      <input type="submit" className="btn btn-primary" value="Add to Cart"/>
+                    </form>
                   </div>
                 </div>
               </div>
