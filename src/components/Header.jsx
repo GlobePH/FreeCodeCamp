@@ -15,7 +15,7 @@ const Header = props => {
           <Logout />
         </div>
         <div className="account-nav pull-right">
-            <Link to="/cart">Cart</Link>
+            <Link to="/cart"><i className="fa fa-shopping-cart" aria-hidden="true"></i>Cart</Link>
           </div>
       </div>
       

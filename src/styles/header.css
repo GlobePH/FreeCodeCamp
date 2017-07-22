@@ -5,3 +5,18 @@
 .navbar-default .navbar-brand{
     color: #fff;
 }
+.account-nav.pull-right a {
+    line-height: 50px;
+    color: #fff;
+    padding: 0 1em;
+    display: inline-block;
+    transition: all .4s ease-out;
+}
+.account-nav.pull-right a:hover{
+    background-color: #0abfa4;
+    text-decoration: none;
+}
+.account-nav.pull-right a .fa {
+    font-size: 20px;
+    margin-right: 10px;
+}
