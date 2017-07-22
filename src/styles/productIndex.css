@@ -6,9 +6,16 @@
 }
 .product-content{
   padding: 5%;
+  color: #272727;
   border: 1px solid #ccc;
   border-radius: 10px;
   display: block;
+  transition: all .4s ease-out;
+}
+.product-content:hover{
+  background-color: #f1f1f1;
+  color: #272727;
+  text-decoration: none;
 }
 .product-thumbnail{
   background-image: url(http://via.placeholder.com/350x350);
