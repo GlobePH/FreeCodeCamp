@@ -1,11 +1,27 @@
-import { createStore, compose } from "redux";
-import reducer from "./reducer";
+import { createStore, compose, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import { reactReduxFirebase } from 'react-redux-firebase'
+import reducer from './reducer'
 
-const composeEnhancers =
-  typeof window === "object" &&
-  typeof window.__REDUX_DEVTOOLS_EXTENSION__ !== "undefined"
-    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-    : compose;
-const store = createStore(reducer, composeEnhancers());
 
-export default store;
+
+const config = {
+  apiKey: 'AIzaSyAQPIoN8G0GV9hYd1mN30Y6mKjFLGQhnqA',
+  authDomain: 'globe-hackathon.firebaseapp.com',
+  databaseURL: 'https://globe-hackathon.firebaseio.com',
+  projectId: 'globe-hackathon',
+  storageBucket: 'globe-hackathon.appspot.com',
+  messagingSenderId: '246767341490'
+}
+
+
+const store = createStore(
+  reducer,
+  compose(
+    applyMiddleware(thunk),
+    reactReduxFirebase(config),
+    typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f
+  )
+)
+
+export default store

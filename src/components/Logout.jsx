@@ -3,12 +3,7 @@ import { connect } from "react-redux";
 import { logoutAction } from "../actions/login";
 
 class Logout extends Component {
-  constructor (props) {
-    super(props)
-    this.logoutHandler = this.logoutHandler.bind(this);
-  }
-  
-  logoutHandler () {
+  logoutHandler = ()  => {
     this.props.dispatch(logoutAction());
   };
 

@@ -14,7 +14,7 @@ export function loginAction() {
 }
 
 const DEFAULT_STATE = {
-  authenticated: false
+  authenticated: false,
 };
 
 const loginReducer = (state = DEFAULT_STATE, action) => {

@@ -2,7 +2,7 @@ import * as firebase from "firebase";
 import "firebase/database";
 import "firebase/auth";
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyAQPIoN8G0GV9hYd1mN30Y6mKjFLGQhnqA",
   authDomain: "globe-hackathon.firebaseapp.com",
   databaseURL: "https://globe-hackathon.firebaseio.com",

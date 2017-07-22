@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Logout from "./Logout";
+import {Link} from 'react-router-dom'
 
 const Header = props => {
   console.log(props.authenticated);
@@ -16,6 +17,7 @@ const Header = props => {
           <Logout />
         </div>
       </div>
+      <Link to="/cart">Cart</Link>
     </nav>
   );
 };
