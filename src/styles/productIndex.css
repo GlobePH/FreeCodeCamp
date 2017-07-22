@@ -10,3 +10,10 @@
   border-radius: 10px;
   display: block;
 }
+.product-thumbnail{
+  background-image: url(http://via.placeholder.com/350x350);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 100%;
+}
