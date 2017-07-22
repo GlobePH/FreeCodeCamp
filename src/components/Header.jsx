@@ -11,7 +11,7 @@ const Header = props => {
     <nav className="navbar navbar-default">
       <div className="container">
         <div className="navbar-header">
-          <div className="navbar-brand">Farmbase</div>
+          <div className="navbar-brand"><Link to="/">Farmbase</Link></div>
           <Logout />
         </div>
         <div className="account-nav pull-right">

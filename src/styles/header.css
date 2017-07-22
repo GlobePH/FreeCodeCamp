@@ -5,6 +5,15 @@
 .navbar-default .navbar-brand{
     color: #fff;
 }
+.navbar-brand a{
+    color: #fff;
+    font-weight: 600;
+}
+.navbar-brand a:hover{
+    color: #fff;
+    text-decoration: none;
+    opacity: .7;
+}
 .account-nav.pull-right a {
     line-height: 50px;
     color: #fff;
