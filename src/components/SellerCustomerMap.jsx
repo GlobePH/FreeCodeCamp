@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 
 const SellerCustomerMap = withGoogleMap(props => {
@@ -10,10 +10,9 @@ const SellerCustomerMap = withGoogleMap(props => {
       onClick={props.onMapClick}
     >
       {props.markers.map((marker, index) => {
-        <Marker
+        return <Marker
           {...marker}
-          key={index}
-          onRightClick={() => props.onMarkerRightClick(index)}
+          onRightClick={() => props.onMarkerRightClick(marker)}
         />
       })}
     </GoogleMap>
