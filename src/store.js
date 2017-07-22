@@ -1,11 +1,10 @@
 import { createStore, compose, applyMiddleware } from 'redux'
 import reducer from './reducer'
 
+const composeEnhancers = typeof window === 'object' && typeof window.__REDUX_DEVTOOLS_EXTENSION__ !== 'undefined' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : compose
 const store = createStore(
   reducer,
-  compose(
-    typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f
-  )
+  composeEnhancers()
 )
 
 export default store

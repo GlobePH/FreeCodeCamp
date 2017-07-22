@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux'
-
 import auth from './actions/login'
 
 const rootReducer = combineReducers({
