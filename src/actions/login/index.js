@@ -16,4 +16,4 @@ const loginReducer = (state = DEFAULT_STATE, action) => {
   }
 }
 
-export const loginReducer;
+export default loginReducer
