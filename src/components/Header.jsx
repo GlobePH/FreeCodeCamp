@@ -8,7 +8,7 @@ import "../styles/header.css";
 const Header = props => {
   console.log(props.authenticated);
   return (
-    <nav className="navbar navbar-default">
+    <nav className="navbar navbar-default navbar-fixed-top">
       <div className="container">
         <div className="navbar-header">
           <div className="navbar-brand"><Link to="/">Farmbase</Link></div>
