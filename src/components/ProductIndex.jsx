@@ -22,7 +22,12 @@ export default class ProductIndex extends Component {
     return (
       <div className="ProductIndex">
         {this.state.crops.map(crop =>
-          <ProductItem key={crop.id} name={crop.name} imgURL={crop.imgURL} />
+          <ProductItem
+            key={crop.id}
+            name={crop.name}
+            imgURL={crop.imgURL}
+            quantity={crop.quantity}
+          />
         )}
       </div>
     );
