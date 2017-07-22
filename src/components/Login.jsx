@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "../styles/login.css";
 import { fbAuth } from "../fire";
+import { connect } from "react-redux";
+import { loginAction } from "../actions/login";
 
-export default class Login extends Component {
-  constructor() {
-    super();
+class Login extends Component {
+  constructor(props) {
+    super(props);
     fbAuth.onAuthStateChanged(user => {
-      user
-        ? console.error("Logged in as", user.email)
-        : console.error("Not logged in");
+      user ? props.dispatch(loginAction()) : console.error("Not logged in");
     });
     this.state = {
       userEmail: "",
@@ -75,3 +75,5 @@ export default class Login extends Component {
     );
   }
 }
+
+export default connect()(Login);
