@@ -32,8 +32,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
-
-      <div style={{minHeight: '700px'}}/>
+      
     </div>
   );
 };
