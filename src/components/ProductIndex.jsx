@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 import React, { Component } from "react";
 import { fbDatabase } from "../fire";
 import ProductItem from "./ProductItem";
 import "../styles/productIndex.css";
-=======
-import React, { Component } from 'react'
-import { fbDatabase } from '../fire'
-import ProductItem from './ProductItem'
->>>>>>> react-redux-firebase
+
 
 export default class ProductIndex extends Component {
   state = {
@@ -25,25 +20,20 @@ export default class ProductIndex extends Component {
   render () {
     return (
       <div className="ProductIndex">
-<<<<<<< HEAD
-        {this.state.crops.map(crop =>
-          <ProductItem
-            key={crop.id}
-            name={crop.name}
-            imgURL={crop.imgURL}
-            quantity={crop.quantity}
-          />
-        )}
-=======
         <div className="container">
           <div className="row">
-            {this.state.crops.map(crop =>
-              <ProductItem key={crop.id} name={crop.name} imgURL={crop.imgURL}/>
-            )}
+            <div className="col-sm-9">
+              <div className="row">
+                {this.state.crops.map(crop =>
+                  <ProductItem key={crop.id} name={crop.name} imgURL={crop.imgURL} quantity={crop.quantity}/>
+                )}
+              </div>
+            </div>
+            <div className="col-sm-3">
+              Add cart here...
+            </div>
           </div>
         </div>
-
->>>>>>> react-redux-firebase
       </div>
     )
   }
