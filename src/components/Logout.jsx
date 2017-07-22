@@ -1,9 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
+import { fbAuth } from "../fire";
 import { connect } from "react-redux";
+import { logoutAction } from "../actions/login";
 
-function Logout({ auth }) {
-  if (auth) {
-    return <button>Log Out</button>;
+class Logout extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  logoutHandler = () => {
+    this.props.dispatch(logoutAction());
+  };
+
+  render() {
+    if (this.props.auth) {
+      return <button onClick={this.logoutHandler}>Log Out</button>;
+    }
+    return false;
   }
 }
 
