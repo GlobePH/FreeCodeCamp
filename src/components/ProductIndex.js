@@ -9,10 +9,8 @@ export default class ProductIndex extends Component {
 
   render() {
     return(
-<<<<<<< HEAD
       <div className="ProductIndex">
         <p>test Product Index</p>
-=======
       <div className="product-index">
         <div className="container product-list">
           <div className="row">
@@ -24,7 +22,6 @@ export default class ProductIndex extends Component {
             <ProductItem />
           </div>
         </div>
->>>>>>> Added Styles to ProductItem
       </div>
     );
   }
