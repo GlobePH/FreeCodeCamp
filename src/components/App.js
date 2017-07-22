@@ -7,6 +7,7 @@ import firebaseui from "firebaseui";
 import Header from './Header';
 import Login from './Login';
 import Landing from './Landing';
+import ProductIndex from './ProductIndex';
 
 firebase.initializeApp({
   apiKey: "AIzaSyAQPIoN8G0GV9hYd1mN30Y6mKjFLGQhnqA",
@@ -24,6 +25,7 @@ const App = () => {
       <Switch>
         <Route path='/' exact component={Landing}/>
         <Route path='/login' component={Login}/>
+        <Route path='/products' component={ProductIndex}/>
       </Switch>
     </div>
   )
