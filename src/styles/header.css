@@ -55,13 +55,13 @@
     }
     .mmenu {
         position: fixed;
-        right: 0;
+        left: 0;
         top: 0;
         z-index: 9999;
         background: #00d1b2;
         height: 100vh;
         width: 300px;
-        transform: translateX(110%);
+        transform: translateX(-100%);
         transition: all .4s ease-out;
         padding: 30px 15px;
     }

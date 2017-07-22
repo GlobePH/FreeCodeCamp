@@ -58,7 +58,7 @@ class Header extends Component {
               </div>
             ) : (
               <div className="pull-right">
-                <button className="hamburger hamburger--elastic" type="button" onClick={this.handleHamburgerClick.bind(this)}>
+                <button className={!mmenuOpen ? 'hamburger hamburger--elastic' : 'hamburger hamburger--elastic is-active'} type="button" onClick={this.handleHamburgerClick.bind(this)}>
                   <span className="hamburger-box">
                     <span className="hamburger-inner"></span>
                   </span>
