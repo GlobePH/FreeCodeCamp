@@ -11,5 +11,7 @@ const firebaseConfig = {
   messagingSenderId: "246767341490"
 };
 
+firebase.initializeApp(firebaseConfig);
+
 export const fbDatabase = firebase.database();
 export const fbAuth = firebase.auth();
