@@ -22,17 +22,17 @@ fbDatabase.ref("crops").on("value", snap => {
   cropTypes = snap.val().length;
 });
 
-setInterval(() => {
-  let randomCrop = Math.floor(Math.random() * cropTypes);
-  let randomOperator = Math.floor(Math.random() * 2) > 0 ? -1 : 1;
-  let randomQuantity = randomOperator * Math.floor(Math.random() * 5);
-  fbDatabase.ref("crops").transaction(fruits => {
-    if (fruits) {
-      let ret = fruits;
-      let newItem = ret[randomCrop];
-      newItem.quantity = newItem.quantity + randomQuantity;
-      ret.splice(randomCrop, 1, newItem);
-      return ret;
-    }
-  });
-}, 1000);
+// setInterval(() => {
+//   let randomCrop = Math.floor(Math.random() * cropTypes);
+//   let randomOperator = Math.floor(Math.random() * 2) > 0 ? -1 : 1;
+//   let randomQuantity = randomOperator * Math.floor(Math.random() * 5);
+//   fbDatabase.ref("crops").transaction(fruits => {
+//     if (fruits) {
+//       let ret = fruits;
+//       let newItem = ret[randomCrop];
+//       newItem.quantity = newItem.quantity + randomQuantity;
+//       ret.splice(randomCrop, 1, newItem);
+//       return ret;
+//     }
+//   });
+// }, 1000);
