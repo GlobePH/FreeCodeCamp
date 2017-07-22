@@ -13,7 +13,7 @@ export default function configureStore (initialState, history) {
     ),
     typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f
   )(createStore)
-  const store = createStoreWithMiddleware(rootReducer)
+  const store = createStoreWithMiddleware(rootReducer, initialState)
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers

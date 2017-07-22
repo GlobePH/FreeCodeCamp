@@ -9,5 +9,8 @@
       "modules": false
       }]
   ],
-  "plugins": ["transform-class-properties"]
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-class-properties"
+  ]
 }
