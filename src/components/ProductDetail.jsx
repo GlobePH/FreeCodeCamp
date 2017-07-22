@@ -24,7 +24,7 @@ class ProductDetail extends Component {
 
   addToCart = (e) => {
     e.preventDefault()
-    this.props.addItem(this.state.name, this.state.quantity)
+    this.props.addItem(this.state.name, this.state.quantity, this.state.lat, this.state.lng)
   }
 
   render() {

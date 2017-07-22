@@ -1,11 +1,13 @@
 const ADD_ITEM = 'ADD_ITEM'
 const REMOVE_ITEM = 'REMOVE_ITEM'
 
-export function addItem (name, quantity) {
+export function addItem (name, quantity, lat, lng) {
   return {
     type: ADD_ITEM,
     name,
-    quantity
+    quantity,
+    lat,
+    lng
   }
 }
 
@@ -23,7 +25,9 @@ const cartReducer = (state = DEFAULT_STATE.cart, action) => {
   if (action.type === ADD_ITEM) {
     return [...state, {
       name: action.name,
-      quantity: action.quantity
+      quantity: action.quantity,
+      lat: action.lat,
+      lng: action.lng
     }]
   }
   return state
