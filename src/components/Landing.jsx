@@ -17,6 +17,22 @@ const Landing = () => {
         </div>  
       </div>
 
+      <div className="main-content">
+        <div className="container text-center">
+          <div className="row">
+            <h2>State what we are trying to solve here</h2>
+            <div className="col-md-8 col-md-offset-2">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                Aenean commodo ligula eget dolor. Aenean massa. 
+                Cum sociis natoque penatibus et magnis dis parturient montes, 
+                nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, 
+                pretium quis, sem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div style={{minHeight: '700px'}}/>
     </div>
   );
