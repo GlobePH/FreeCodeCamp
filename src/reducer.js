@@ -1,14 +1,9 @@
 import { combineReducers } from 'redux'
 
-import {LOG_IN} from './actions'
+import auth from './actions/login'
 
-const logIn = (state = '', action) => {
-  if (action.type === LOG_IN) {
-    return action.payload
-  }
-  return state
-}
-
-const rootReducer = combineReducers({logIn})
+const rootReducer = combineReducers({
+  auth
+});
 
 export default rootReducer
