@@ -1,11 +1,23 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import {render} from "react-dom";
 import App from "./components/App";
 import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App/>
-  </BrowserRouter>, 
-  document.getElementById("root")
-);
+const renderApp = () => {
+  render(
+    <BrowserRouter>
+      <App/>
+    </BrowserRouter>,
+    document.getElementById("root")
+  )
+}
+
+renderApp()
+
+if (module.hot) {
+  module.hot.accept('./components/App', () => {
+    renderApp()
+  })
+}
+
+

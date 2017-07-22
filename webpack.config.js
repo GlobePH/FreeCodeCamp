@@ -1,10 +1,11 @@
 const path = require('path')
+const webpack = require('webpack')
 
 const config = {
   context: __dirname,
   devtool: 'cheap-eval-source-map',
   output: {
-    path: path.join(__dirname, public),
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
     publicPath: '/public/'
   },
