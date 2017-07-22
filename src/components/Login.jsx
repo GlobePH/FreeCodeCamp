@@ -9,19 +9,12 @@ class Login extends Component {
     super(props);
     console.log(props);
     fbAuth.onAuthStateChanged(user => {
-<<<<<<< HEAD
-      if (user) {
-        console.log("MAH USER IZ", user);
-      } else {
-        console.log("NO USER. SAD.");
-=======
       console.log('USER RESPONSE', user);
       if (user) {
         props.dispatch(loginAction());
         console.log('THIS IS STATE', props.state);
       } else {
         console.error('FAIL');
->>>>>>> e3b254f2f3b62e9cf4ef15476f824314e43c0236
       }
     });
     this.state = {
@@ -40,20 +33,10 @@ class Login extends Component {
 
   handleLogin(e) {
     e.preventDefault();
-<<<<<<< HEAD
     fbAuth
       .signInWithEmailAndPassword(this.state.userEmail, this.state.userPass)
       .then(() => this.props.dispatch(loginAction()))
       .catch(error => console.error(error));
-=======
-    fbAuth.signInWithEmailAndPassword(
-      this.state.userEmail,
-      this.state.userPass
-    )
-    .catch(err => {
-      console.log('DAMN YOU', err);
-    })
->>>>>>> e3b254f2f3b62e9cf4ef15476f824314e43c0236
   }
 
   render() {
