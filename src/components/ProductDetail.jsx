@@ -30,7 +30,7 @@ export default class ProductDetail extends Component {
                   </div>
                 </div>
               </div>
-            </div>
+            </div>git
 
             <div className="col-md-3">
               Add cart here...
