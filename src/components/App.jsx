@@ -9,6 +9,11 @@ import Landing from './Landing'
 import ProductIndex from './ProductIndex'
 import ProductDetail from './ProductDetail'
 import Cart from './Cart'
+import Header from './Header'
+import Login from './Login'
+import Landing from './Landing'
+import ProductIndex from './ProductIndex';
+import ConfirmPurchase from './ConfirmPurchase';
 
 import "../styles/index.css";
 
@@ -20,11 +25,14 @@ const App = () =>
     <div>
       <Header/>
       <Switch>
-        <Route path="/" exact component={Landing}/>
+        <Route path='/' exact component={Landing}/>
         <Route path="/login" component={Login}/>
-        <Route path="/crops" exact component={ProductIndex}/>
-        <Route path='/crops/:id' component={ProductDetail}/>
         <Route path="/cart" component={Cart}/>
+        <Route path="/crops" exact component={ProductIndex} />
+        <Route path='/crops/:id' component={ProductDetail} />
+        <Route path='/login' component={Login}/>
+        <Route path='/product' component={ProductIndex}/>
+        <Route path='/confirm-purchase' component={ConfirmPurchase}/>
       </Switch>
     </div>
   </Provider>

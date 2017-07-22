@@ -7,12 +7,9 @@ import { loginAction } from "../actions/login";
 class Login extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
     fbAuth.onAuthStateChanged(user => {
-      console.log('USER RESPONSE', user);
       if (user) {
         props.dispatch(loginAction());
-        console.log('THIS IS STATE', props.state);
       } else {
         console.error('FAIL');
       }
@@ -36,7 +33,7 @@ class Login extends Component {
     fbAuth
       .signInWithEmailAndPassword(this.state.userEmail, this.state.userPass)
       .then(() => this.props.dispatch(loginAction()))
-      .catch(error => console.error(error));
+      .catch(error => console.error(error))
   }
 
   render() {
@@ -72,6 +69,7 @@ class Login extends Component {
               </div>
               <button
                 onClick={this.handleLogin.bind(this)}
+                type='submit'
                 className="btn btn-default"
               >
                 Login

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { compose } from "redux";
@@ -33,7 +34,22 @@ class ProductDetail extends Component {
                       className="img-responsive"
                     />
                   </div>
+=======
+import React from 'react'
+
+const ProductDetail = (props) => {
+  return (
+    <div className="product-detail">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-9">
+            <div className="row">
+              <div className="col-md-5">
+                <div className="product-detail-image">
+                  <img src="http://via.placeholder.com/350x350" alt="" className="img-responsive"/>
+>>>>>>> bdeadf021d61c407fe21c3569af3cdc9cae1e6cc
                 </div>
+              </div>
 
                 <div className="col-md-7">
                   <div className="product-detail-summary">
@@ -65,8 +81,10 @@ class ProductDetail extends Component {
             </div>
             <div className="col-md-3">Add cart here...</div>
           </div>
+
         </div>
       </div>
+<<<<<<< HEAD
     );
   }
 }
@@ -77,3 +95,10 @@ export default compose(
     crops: dataToJS(firebase, "crops")
   }))
 )(ProductDetail);
+=======
+    </div>
+  )
+}
+
+export default ProductDetail
+>>>>>>> bdeadf021d61c407fe21c3569af3cdc9cae1e6cc
