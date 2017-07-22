@@ -3,8 +3,6 @@ import { connect } from "react-redux";
 import { compose } from "redux";
 import {
   firebaseConnect,
-  isLoaded,
-  isEmpty,
   dataToJS
 } from "react-redux-firebase";
 import _ from "lodash";

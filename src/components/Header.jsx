@@ -11,10 +11,16 @@ const Header = props => {
   return (
     <nav className="navbar navbar-default navbar-fixed-top">
       <div className="container">
+<<<<<<< HEAD
         <div className="navbar-header pull-left">
           <div className="navbar-brand">
             <Link to="/">Farmbase</Link>
           </div>
+=======
+        <div className="navbar-header">
+          <div className="navbar-brand"><Link to="/">Farmbase <i className="fa fa-leaf" aria-hidden="true"></i>
+          </Link></div>
+>>>>>>> added icons
           <Logout />
         </div>
 
@@ -53,6 +59,10 @@ const Header = props => {
         </Media>
 
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> added icons
     </nav>
   );
 };

@@ -18,24 +18,23 @@ class Cart extends Component {
         ? 'Todo list is empty'
         : Object.keys(crops).map((key, id) => (
             <div>
-              <p>{crops[id].name}</p>
-              <p>{crops[id].quantity}</p>
+              <p>===================</p>
+              <h1>Crop: {crops[id].name}</h1>
+              <p>Quantity: {crops[id].quantity}</p>
+              <p>====================</p>
             </div>
           )
         )
     return (
-      <div>{cropsList}</div>
+      <div>
+        {cropsList}
+
+      </div>
     )
   }
 }
 
 export default compose(
-  firebaseConnect([
-    'crops'
-  ]),
-  connect(
-    ({firebase}) => ({
-      crops: dataToJS(firebase, 'crops'),
-    })
-  )
+  firebaseConnect(['crops']),
+  connect(({firebase}) => ({crops: dataToJS(firebase, 'crops'),}))
 )(Cart)
