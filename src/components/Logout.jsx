@@ -1,13 +1,8 @@
 import React, { Component } from "react";
-import { fbAuth } from "../fire";
 import { connect } from "react-redux";
 import { logoutAction } from "../actions/login";
 
 class Logout extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   logoutHandler = () => {
     this.props.dispatch(logoutAction());
   };
