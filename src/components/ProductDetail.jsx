@@ -23,16 +23,10 @@ class ProductDetail extends Component {
 
   addToCart = (e) => {
     e.preventDefault()
-    console.log(this.props.addItem)
     this.props.addItem(this.state.name, this.state.quantity)
   }
 
-  inputSumbit = (e) => {
-    e.preventDefault()
-  }
-
   render() {
-    console.log(this.props)
     let cropIndex;
     if (!this.props.crops) {
       return <span>Loading...</span>;
