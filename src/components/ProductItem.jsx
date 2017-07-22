@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 
 export default class ProductItem extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return(
       <div className="product-item col-md-4 text-center">
