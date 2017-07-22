@@ -23,7 +23,7 @@ class Cart extends Component {
         )
     return (
       <div>
-        <h1>{this.props.crops}</h1>
+        <h1>{cropsList}</h1>
       </div>
     )
   }
