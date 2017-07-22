@@ -8,3 +8,4 @@ button {
 a {
   transition: all .4s ease-out;
 }
+p { line-height: 1.75em; }

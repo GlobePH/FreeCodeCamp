@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import configureStore from "../store";
 
 import Header from "./Header";
+import Footer from "./Footer";
 import Login from "./Login";
 import Landing from "./Landing";
 import ProductIndex from "./ProductIndex";
@@ -32,6 +33,7 @@ const App = () =>
         <Route path="/product" component={ProductIndex} />
         <Route path="/confirm-purchase" component={ConfirmPurchase} />
       </Switch>
+      <Footer />
     </div>
   </Provider>;
 

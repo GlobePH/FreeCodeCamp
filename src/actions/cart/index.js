@@ -1,9 +1,11 @@
-const ADD_ITEM = "ADD_ITEM"
-const REMOVE_ITEM = "REMOVE_ITEM"
+const ADD_ITEM = 'ADD_ITEM'
+const REMOVE_ITEM = 'REMOVE_ITEM'
 
-export function addItem() {
+export function addItem (name, quantity) {
   return {
-    type: ADD_ITEM
+    type: ADD_ITEM,
+    name,
+    quantity
   }
 }
 
@@ -14,15 +16,15 @@ export function removeItem () {
 }
 
 const DEFAULT_STATE = {
-  items: []
+  cart: {}
 }
 
-const cartReducer = (state = DEFAULT_STATE, action) => {
+const cartReducer = (state = DEFAULT_STATE.cart, action) => {
   if (action.type === ADD_ITEM) {
-    return [...state.items, {
+    return Object.assign({}, state, {
       name: action.name,
       quantity: action.quantity
-    }]
+    })
   }
   return state
 }
