@@ -10,7 +10,7 @@ import Landing from "./Landing";
 import ProductIndex from "./ProductIndex";
 import ProductDetail from "./ProductDetail";
 import Cart from "./Cart";
-import ConfirmPurchase from "./ConfirmPurchase";
+import TrackingPurchase from "./TrackingPurchase";
 
 import "../styles/index.css";
 
@@ -31,7 +31,7 @@ const App = () =>
         <Route path="/crops/:id" component={ProductDetail} />
         <Route path="/login" component={Login} />
         <Route path="/product" component={ProductIndex} />
-        <Route path="/confirm-purchase" component={ConfirmPurchase} />
+        <Route path="/tracking-purchase" component={TrackingPurchase} />
       </Switch>
       <Footer />
     </div>
