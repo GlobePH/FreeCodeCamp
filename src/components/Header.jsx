@@ -47,12 +47,6 @@ class Header extends Component {
                       <li>
                         <Link to="/crops">Crops</Link>
                       </li>
-                      <li>
-                        <a href="/">Page 2</a>
-                      </li>
-                      <li>
-                        <a href="/">Page 3</a>
-                      </li>
                     </ul>
                   </div>
                 : <div className="pull-right">
