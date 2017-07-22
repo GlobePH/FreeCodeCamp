@@ -9,6 +9,7 @@ import {
 } from 'react-redux-firebase'
 
 import ProductItem from './ProductItem'
+import Cart from './Cart'
 import '../styles/productIndex.css'
 
 class ProductIndex extends Component {
@@ -36,7 +37,9 @@ class ProductIndex extends Component {
                 {cropsList}
               </div>
             </div>
-            <div className="col-sm-3">Add cart here...</div>
+            <div className="col-sm-3">
+              <Cart/>
+            </div>
           </div>
         </div>
       </div>

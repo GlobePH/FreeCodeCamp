@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 class Cart extends Component {
   render () {
@@ -9,8 +10,9 @@ class Cart extends Component {
     if (cart) {
       cropsItem = cart.map(item => (
         <div>
-          <h2>{item}</h2>
-          <p>{item.quantity}</p>
+          <h4>Crop Name: <b>{item.name}</b></h4>
+          <p>Quantity: {item.quantity}</p>
+          <p>Price: ₱{Math.floor(Math.random() * 10 * item.quantity).toFixed(2)}</p>
         </div>
       ))
     } else {
@@ -19,7 +21,9 @@ class Cart extends Component {
 
     return (
       <div>
+        <h3>Cart Items</h3>
         {cropsItem}
+        <Link to="/tracking-purchase">Continue to Checkout</Link>
       </div>
     )
   }

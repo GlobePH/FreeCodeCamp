@@ -16,7 +16,7 @@ class Header extends Component {
         <div className="container">
           <div className="navbar-header pull-left">
             <div className="navbar-brand">
-              <Link to="/">Farmbase</Link>
+              <Link to="/"><i className="fa fa-free-code-camp" aria-hidden="true"></i>. Farmbase</Link>
             </div>
             <Logout />
           </div>
