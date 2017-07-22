@@ -42,7 +42,13 @@ const Header = props => {
               </ul>
             </div>
           ) : (
-            <div className="pull-right">test</div>
+            <div className="pull-right">
+              <button class="hamburger hamburger--elastic" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button> 
+            </div>
           )}
         </Media>
 
