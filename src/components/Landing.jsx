@@ -1,10 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Landing = () => {
   return (
-    <h1>
-      I am Farmbase
-    </h1>
+    <div>
+      <h1>
+        I am Farmbase
+      </h1>
+      <Link to='/login'>
+        <button>Go to login</button>
+      </Link>
+    </div>
   )
 }
 
