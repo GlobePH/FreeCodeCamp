@@ -21,9 +21,13 @@ export default class ProductIndex extends Component {
   render() {
     return (
       <div className="ProductIndex">
-        {this.state.crops.map(crop =>
-          <ProductItem key={crop.id} name={crop.name} imgURL={crop.imgURL} />
-        )}
+        <div className="container">
+          <div className="row">
+            {this.state.crops.map(crop =>
+              <ProductItem key={crop.id} name={crop.name} imgURL={crop.imgURL} />
+            )}
+          </div>
+        </div>    
       </div>
     );
   }
