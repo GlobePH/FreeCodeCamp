@@ -1,27 +1,27 @@
-import { createStore, compose, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk'
+import { createStore, compose } from 'redux'
+import rootReducer from './reducer'
+import { firebaseConfig } from './fire'
 import { reactReduxFirebase } from 'react-redux-firebase'
-import reducer from './reducer'
 
-
-
-const config = {
-  apiKey: 'AIzaSyAQPIoN8G0GV9hYd1mN30Y6mKjFLGQhnqA',
-  authDomain: 'globe-hackathon.firebaseapp.com',
-  databaseURL: 'https://globe-hackathon.firebaseio.com',
-  projectId: 'globe-hackathon',
-  storageBucket: 'globe-hackathon.appspot.com',
-  messagingSenderId: '246767341490'
-}
-
-
-const store = createStore(
-  reducer,
-  compose(
-    applyMiddleware(thunk),
-    reactReduxFirebase(config),
+export default function configureStore (initialState, history) {
+  const createStoreWithMiddleware = compose(
+    reactReduxFirebase(firebaseConfig,
+      {
+        userProfile: 'users',
+        enableLogging: false
+      }
+    ),
     typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f
-  )
-)
+  )(createStore)
+  const store = createStoreWithMiddleware(rootReducer)
 
-export default store
+  if (module.hot) {
+    // Enable Webpack hot module replacement for reducers
+    module.hot.accept('./reducer', () => {
+      const nextRootReducer = require('./reducer')
+      store.replaceReducer(nextRootReducer)
+    })
+  }
+
+  return store
+}

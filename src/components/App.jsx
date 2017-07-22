@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import store from '../store'
+import configureStore from '../store'
 
 import Header from './Header'
 import Login from './Login'
@@ -9,6 +9,9 @@ import Landing from './Landing'
 import ProductIndex from './ProductIndex'
 import ProductDetail from './ProductDetail'
 import Cart from './Cart'
+
+const initialState = window.__INITIAL_STATE__ || {firebase: {authError: null}}
+const store = configureStore(initialState)
 
 const App = () =>
   <Provider store={store}>
