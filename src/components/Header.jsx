@@ -7,11 +7,8 @@ import Media from 'react-media'
 import "../styles/hamburger.css";
 import "../styles/header.css";
 
-// const Header = props => {
+
 class Header extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render(){
     return (

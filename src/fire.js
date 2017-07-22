@@ -16,11 +16,11 @@ firebase.initializeApp(firebaseConfig);
 export const fbDatabase = firebase.database();
 export const fbAuth = firebase.auth();
 
-let cropTypes = 0;
+// let cropTypes = 0;
 
-fbDatabase.ref("crops").on("value", snap => {
-  cropTypes = snap.val().length;
-});
+// fbDatabase.ref("crops").on("value", snap => {
+//   cropTypes = snap.val().length;
+// });
 
 // setInterval(() => {
 //   let randomCrop = Math.floor(Math.random() * cropTypes);

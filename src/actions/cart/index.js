@@ -16,21 +16,15 @@ export function removeItem () {
 }
 
 const DEFAULT_STATE = {
-  cart: {}
+  cart: []
 }
 
 const cartReducer = (state = DEFAULT_STATE.cart, action) => {
   if (action.type === ADD_ITEM) {
-    if (!state[action.name]) {
-      return Object.assign({}, state, {
-        [action.name] : {
-          quantity: action.quantity
-        }
-      })
-    } else {
-      return state[action.name].quantity + action.quantity
-    }
-
+    return Object.assign({}, state, {
+      name: action.name,
+      quantity: action.quantity
+    })
   }
   return state
 }
