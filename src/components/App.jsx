@@ -6,6 +6,7 @@ import store from '../store'
 import Header from './Header'
 import Login from './Login'
 import Landing from './Landing'
+import ProductIndex from './ProductIndex';
 
 const App = () => (
   <Provider store={store}>
@@ -14,6 +15,7 @@ const App = () => (
       <Switch>
         <Route path='/' exact component={Landing}/>
         <Route path='/login' component={Login}/>
+        <Route path='/product' component={ProductIndex} />
       </Switch>
     </div>
   </Provider>

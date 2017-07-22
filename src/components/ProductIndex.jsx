@@ -9,8 +9,6 @@ export default class ProductIndex extends Component {
 
   render() {
     return(
-      <div className="ProductIndex">
-        <p>test Product Index</p>
       <div className="product-index">
         <div className="container product-list">
           <div className="row">
