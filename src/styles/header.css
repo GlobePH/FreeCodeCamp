@@ -45,3 +45,12 @@
     color: #fff;
     background-color: #0abfa4;
 }
+
+@media only screen and (max-width: 767px) {
+    .hamburger{
+        margin-top: 10px;
+    }
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+        background-color: #fff;
+    }
+}
