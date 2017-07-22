@@ -1,0 +1,11 @@
+.product-index {
+  padding: 60px 0;
+}
+.product-item{
+  margin-bottom: 25px;
+}
+.product-content{
+  padding: 5%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}

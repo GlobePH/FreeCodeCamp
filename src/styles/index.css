@@ -1,4 +1,7 @@
 /* General Styles ====================== */
+html, body{
+  font-family: 'Open Sans', sans-serif;
+}
 button {
   transition: all .4s ease-out;
 }

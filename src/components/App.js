@@ -4,6 +4,8 @@ import "firebase/database";
 import { Switch, Route } from 'react-router-dom';
 import firebaseui from "firebaseui";
 
+import "../styles/index.css";
+
 import Header from './Header';
 import Login from './Login';
 import Landing from './Landing';
