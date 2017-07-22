@@ -7,17 +7,16 @@ const Header = props => {
   console.log(props.authenticated);
   return (
     <nav className="navbar navbar-default">
-      <div className="container-fluid">
+      <div className="container">
         <div className="navbar-header">
           <div className="navbar-brand">Farmbase</div>
-          <span>
-            Authenticated?
-            {props.authenticated.toString()}
-          </span>
           <Logout />
         </div>
+        <div className="account-nav pull-right">
+            <Link to="/cart">Cart</Link>
+          </div>
       </div>
-      <Link to="/cart">Cart</Link>
+      
     </nav>
   );
 };
