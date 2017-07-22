@@ -10,6 +10,8 @@ import ProductIndex from './ProductIndex'
 import ProductDetail from './ProductDetail'
 import Cart from './Cart'
 
+import "../styles/index.css";
+
 const initialState = window.__INITIAL_STATE__ || {firebase: {authError: null}}
 const store = configureStore(initialState)
 

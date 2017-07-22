@@ -5,3 +5,6 @@ html, body{
 button {
   transition: all .4s ease-out;
 }
+a {
+  transition: all .4s ease-out;
+}
