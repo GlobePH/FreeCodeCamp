@@ -8,8 +8,33 @@ import {
   dataToJS
 } from "react-redux-firebase";
 import _ from "lodash";
+
+import * as action from '../actions/cart'
+
+
 class ProductDetail extends Component {
+  state = {
+    quantity: 0,
+    name: "" || this.props.match.params.id
+  }
+
+  handleInputChange = (e) => {
+    e.preventDefault()
+    this.setState({ quantity: e.target.value })
+  }
+
+  addToCart = (e) => {
+    e.preventDefault()
+    console.log(this.props.addItem)
+    this.props.addItem(this.state.name, this.state.quantity)
+  }
+
+  inputSumbit = (e) => {
+    e.preventDefault()
+  }
+
   render() {
+    console.log(this.props)
     let cropIndex;
     if (!this.props.crops) {
       return <span>Loading...</span>;
@@ -47,18 +72,20 @@ class ProductDetail extends Component {
                     ) / 100}{" "}
                     bawat nguya
                   </p>
-                  <form className="form-inline">
+                  <form className="form-inline" onSubmit={this.addToCart}>
                     <div className="form-group">
                       <label>Quantity:</label>
-                      <input type="number" className="form-control" />
+                      <input
+                        type="number"
+                        onChange={this.handleInputChange}
+                        className="form-control"
+                        value={this.state.quantity}
+                      />
+                      <button
+                        type="submit"
+                        className="btn btn-primary"
+                      >Add to Cart </button>
                     </div>
-                  </form>
-                  <form>
-                    <input
-                      type="submit"
-                      className="btn btn-primary"
-                      value="Add to Cart"
-                    />
                   </form>
                 </div>
               </div>
@@ -71,9 +98,13 @@ class ProductDetail extends Component {
   }
 }
 
+const mapStateToProps = (state) => ({
+  name: state.name,
+  quantity: state.quantity,
+  crops: dataToJS(state.firebase, 'crops')
+})
+
 export default compose(
   firebaseConnect(["crops"]),
-  connect(({ firebase }) => ({
-    crops: dataToJS(firebase, "crops")
-  }))
+  connect(mapStateToProps, action)
 )(ProductDetail);
