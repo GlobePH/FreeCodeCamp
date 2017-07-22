@@ -3,15 +3,11 @@ import { Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import configureStore from '../store'
 
-<<<<<<< HEAD
 import Header from './Header'
 import Login from './Login'
 import Landing from './Landing'
 import ProductIndex from './ProductIndex'
 import ProductDetail from './ProductDetail'
-=======
-import ProductDetail from './ProductDetail';
->>>>>>> Add map function
 import Cart from './Cart'
 import Header from './Header'
 import Login from './Login'
