@@ -7,12 +7,12 @@ class Cart extends Component {
     let cropsItem
 
     if (cart) {
-      // cropsItem = cart.map(item => (
-      //   <div>
-      //     <h2>{item}</h2>
-      //     <p>{item.quantity}</p>
-      //   </div>
-      // ))
+      cropsItem = cart.map(item => (
+        <div>
+          <h2>{item}</h2>
+          <p>{item.quantity}</p>
+        </div>
+      ))
     } else {
       cropsItem = <p>Add a Crop to Cart</p>
     }

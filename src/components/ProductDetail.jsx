@@ -43,7 +43,7 @@ class ProductDetail extends Component {
           <div className="row">
             <div className="col-md-9">
               <div className="row">
-                <div className="col-md-5">
+                <div className="col-md-5">/
                   <div className="product-detail-image">
                     <img
                       src={this.props.crops[cropIndex].imgURL}
@@ -53,7 +53,6 @@ class ProductDetail extends Component {
                   </div>
                 </div>
               </div>
-
               <div className="col-md-7">
                 <div className="product-detail-summary">
                   <h1 className="pd-title">
@@ -87,6 +86,7 @@ class ProductDetail extends Component {
           <div className="col-md-3">
             Add cart here...
             <Link to="/cart">Go to Cart</Link>
+            <Link to="/crops">Back to Shop</Link>
           </div>
         </div>
       </div>
