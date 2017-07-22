@@ -16,11 +16,11 @@ export default class Login extends Component {
             <form>
               <div className="app-logo text-center"><h1>Farmbase</h1></div>
               <div className="form-group">
-                <label for="email">Email:</label>
+                <label htmlFor="email">Email:</label>
                 <input className="form-control" type="email" placeholder="Email" />
               </div>
               <div className="form-group">
-                <label for="email">Password:</label>
+                <label htmlFor="email">Password:</label>
                 <input className="form-control" type="password" placeholder="Password" />
               </div>
               <button onClick={this.handleLogin.bind(this)} className="btn btn-default">Login</button>
