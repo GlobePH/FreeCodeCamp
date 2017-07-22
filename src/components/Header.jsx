@@ -1,30 +1,40 @@
 import React from "react";
 import { connect } from "react-redux";
 import Logout from "./Logout";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 import "../styles/header.css";
 
 const Header = props => {
-  console.log(props.authenticated);
   return (
     <nav className="navbar navbar-default">
       <div className="container">
         <div className="navbar-header">
-          <div className="navbar-brand"><Link to="/">Farmbase</Link></div>
+          <div className="navbar-brand">
+            <Link to="/">Farmbase</Link>
+          </div>
           <Logout />
         </div>
         <div className="account-nav pull-right">
-          <Link to="/cart"><i className="fa fa-shopping-cart" aria-hidden="true"></i>Cart</Link>
+          <Link to="/cart">
+            <i className="fa fa-shopping-cart" aria-hidden="true" />Cart
+          </Link>
         </div>
         <ul className="nav navbar-nav pull-right">
-          <li className="active"><a href="/">Home</a></li>
-          <li><a href="/">Page 1</a></li>
-          <li><a href="/">Page 2</a></li>
-          <li><a href="/">Page 3</a></li>
+          <li className="active">
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/">Page 1</a>
+          </li>
+          <li>
+            <a href="/">Page 2</a>
+          </li>
+          <li>
+            <a href="/">Page 3</a>
+          </li>
         </ul>
       </div>
-      
     </nav>
   );
 };
