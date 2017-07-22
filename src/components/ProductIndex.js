@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ProductItem from "./ProductItem";
 
 export default class ProductIndex extends Component {
   constructor() {
@@ -9,13 +8,7 @@ export default class ProductIndex extends Component {
   render() {
     return(
       <div className="ProductIndex">
-        <div className="container product-list">
-          <div className="row">
-            <ProductItem />
-            <ProductItem />
-            <ProductItem />
-          </div>
-        </div>
+        <p>test Product Index</p>
       </div>
     );
   }
