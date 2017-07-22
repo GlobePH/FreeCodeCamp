@@ -9,8 +9,20 @@ import "../styles/header.css";
 
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      mmenuOpen: false
+    };
+  }
+
+  handleHamburgerClick() {
+    this.setState({ mmenuOpen: !this.state.mmenuOpen });
+    console.log(this.state.mmenuOpen);
+  }
 
   render(){
+    const {mmenuOpen} = this.state
     return (
       <nav className="navbar navbar-default navbar-fixed-top">
         <div className="container">
@@ -46,11 +58,29 @@ class Header extends Component {
               </div>
             ) : (
               <div className="pull-right">
-                <button className="hamburger hamburger--elastic" type="button">
+                <button className="hamburger hamburger--elastic" type="button" onClick={this.handleHamburgerClick.bind(this)}>
                   <span className="hamburger-box">
                     <span className="hamburger-inner"></span>
                   </span>
                 </button>
+                <div className="mmenu-overlay"></div>
+                <div className={mmenuOpen ? 'mmenu open' : 'mmenu'}>
+                  <p className="mmnenu-close" onClick={this.handleHamburgerClick.bind(this)}>&times;</p>
+                  <ul className="mmenu-list">
+                    <li>
+                      <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                      <Link to="/crops">Catalogue</Link>
+                    </li>
+                    <li>
+                      <a href="/">Page 2</a>
+                    </li>
+                    <li>
+                      <a href="/">Page 3</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             )}
           </Media>
