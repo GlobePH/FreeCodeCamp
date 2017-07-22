@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import Logout from "./Logout";
 import {Link} from 'react-router-dom'
 
+import "../styles/header.css";
+
 const Header = props => {
   console.log(props.authenticated);
   return (
