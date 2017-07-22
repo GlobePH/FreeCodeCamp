@@ -1,6 +1,14 @@
 import React, { Component } from "react";
+<<<<<<< HEAD
 import * as firebase from "firebase";
 import "firebase/database";
+=======
+import { Switch, Route } from 'react-router-dom';
+import firebase from "firebase";
+import firebaseui from "firebaseui";
+
+import Header from './Header';
+>>>>>>> Add react router
 
 firebase.initializeApp({
   apiKey: "AIzaSyAQPIoN8G0GV9hYd1mN30Y6mKjFLGQhnqA",
