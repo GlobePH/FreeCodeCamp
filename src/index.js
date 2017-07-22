@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles/index.css";
-import App from "./components/App";
+import Login from "./components/Login";
 import registerServiceWorker from "./utils/registerServiceWorker";
 
 // Material-UI temporary dependency
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<Login />, document.getElementById("root"));
 registerServiceWorker();
