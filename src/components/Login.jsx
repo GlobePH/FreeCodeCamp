@@ -7,8 +7,15 @@ import { loginAction } from "../actions/login";
 class Login extends Component {
   constructor(props) {
     super(props);
+    console.log(props);
     fbAuth.onAuthStateChanged(user => {
-      user ? props.dispatch(loginAction()) : console.error("Not logged in");
+      console.log('USER RESPONSE', user);
+      if (user) {
+        props.dispatch(loginAction());
+        console.log('THIS IS STATE', props.state);
+      } else {
+        console.error('FAIL');
+      }
     });
     this.state = {
       userEmail: "",
@@ -24,11 +31,15 @@ class Login extends Component {
     this.setState({ userPass: e.target.value });
   }
 
-  handleLogin() {
+  handleLogin(e) {
+    e.preventDefault();
     fbAuth.signInWithEmailAndPassword(
       this.state.userEmail,
       this.state.userPass
-    );
+    )
+    .catch(err => {
+      console.log('DAMN YOU', err);
+    })
   }
 
   render() {
@@ -76,4 +87,8 @@ class Login extends Component {
   }
 }
 
-export default connect()(Login);
+const mapStateToProps = (state) => ({
+  state: state
+});
+
+export default connect(mapStateToProps)(Login);
