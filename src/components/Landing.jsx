@@ -19,8 +19,8 @@ const Landing = () => {
 
       <div className="main-content">
         <div className="container text-center">
+          <h2>State what we are trying to solve here</h2>
           <div className="row">
-            <h2>State what we are trying to solve here</h2>
             <div className="col-md-8 col-md-offset-2">
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                 Aenean commodo ligula eget dolor. Aenean massa. 
@@ -32,7 +32,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      
+
     </div>
   );
 };
