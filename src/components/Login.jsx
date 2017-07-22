@@ -3,10 +3,35 @@ import "../styles/login.css";
 import { fbAuth } from "../fire";
 
 export default class Login extends Component {
-  handleLogin() {}
+  constructor() {
+    super();
+    fbAuth.onAuthStateChanged(user => {
+      user
+        ? console.error("Logged in as", user.email)
+        : console.error("Not logged in");
+    });
+    this.state = {
+      userEmail: "",
+      userPass: ""
+    };
+  }
+
+  handleUserEmailInput(e) {
+    this.setState({ userEmail: e.target.value });
+  }
+
+  handleUserPassInput(e) {
+    this.setState({ userPass: e.target.value });
+  }
+
+  handleLogin() {
+    fbAuth.signInWithEmailAndPassword(
+      this.state.userEmail,
+      this.state.userPass
+    );
+  }
 
   render() {
-    console.log(fbAuth);
     return (
       <div className="login-container container">
         <div className="row">
@@ -16,19 +41,25 @@ export default class Login extends Component {
                 <h1>Farmbase</h1>
               </div>
               <div className="form-group">
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email">
+                  Email:{this.state.userEmail}
+                </label>
                 <input
                   className="form-control"
                   type="email"
                   placeholder="Email"
+                  onChange={this.handleUserEmailInput.bind(this)}
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="email">Password:</label>
+                <label htmlFor="email">
+                  Password:{this.state.userPass}
+                </label>
                 <input
                   className="form-control"
                   type="password"
                   placeholder="Password"
+                  onChange={this.handleUserPassInput.bind(this)}
                 />
               </div>
               <button
