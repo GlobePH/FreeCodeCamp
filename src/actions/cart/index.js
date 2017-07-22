@@ -21,10 +21,10 @@ const DEFAULT_STATE = {
 
 const cartReducer = (state = DEFAULT_STATE.cart, action) => {
   if (action.type === ADD_ITEM) {
-    return Object.assign({}, state, {
+    return [...state, {
       name: action.name,
       quantity: action.quantity
-    })
+    }]
   }
   return state
 }
