@@ -103,7 +103,7 @@
 /* Helping Communities ============================== */
 .helping-communities {
   z-index: 0;
-  height: 500px;
+  min-height: 500px;
   background-color: #ccc;
   background-image: url('https://images.pexels.com/photos/247369/pexels-photo-247369.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');
   background-size: cover;
@@ -134,14 +134,16 @@
 }
 
 .helping-communities .container h2 {
-  font-size: 72px;
+  font-size: 45px;
   margin: 20px;
   text-shadow: 1px 5px 5px black;
 }
 
 .helping-communities .container .quote {
   display: block;
-  font-size: 48px;
-  margin: 20px;
+  font-size: 25px;
+  margin: 25px auto 0;
   text-shadow: 1px 5px 5px black;
+  width: 100%;
+  max-width: 700px;
 }
