@@ -28,10 +28,12 @@ class Cart extends Component {
     }
 
     return (
-      <div className="cart">
+      <div className="cart" style={{ height: "85vh", paddingTop: "15vh" }}>
         <h3>Cart Items</h3>
         {cropsItem}
-        <Link className="btn btn-primary" to="/tracking-purchase">Continue to Checkout</Link>
+        <Link className="btn btn-primary" to="/tracking-purchase">
+          Continue to Checkout
+        </Link>
       </div>
     );
   }

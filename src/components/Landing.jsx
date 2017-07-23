@@ -6,10 +6,11 @@ const Landing = () => {
     <div className="page-Landing">
       <div className="home-banner container-fluid">
         <div className="home-banner-content text-center">
-          <h1>We sell the biggest, baddest veggies.</h1>
+          <h1>Protect our farmers, protect our future</h1>
           <div className="text-content" style={{ margin: "auto" }}>
             <p>
-              Halina at subukan mo. Mas malaki pa sa talong ng boyfriend mo.
+              Eat the freshest, greenest, and healthiest crops our Filipino
+              farmers have to offer
             </p>
           </div>
 
@@ -22,15 +23,12 @@ const Landing = () => {
 
       <div className="main-content">
         <div className="container text-center">
-          <h2>State what we are trying to solve here</h2>
+          <h2>Our farmers need help</h2>
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                penatibus et magnis dis parturient montes, nascetur ridiculus
-                mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
-                quis, sem.
+                Our farmers work hard so we can have food on the table. It's our
+                turn to help them.
               </p>
             </div>
           </div>
@@ -39,10 +37,9 @@ const Landing = () => {
 
       <div className="helping-communities text-center">
         <div className="container">
-          <h2>Helping Filipino Farmers</h2>
+          <h2>Our number one metric</h2>
           <em className="quote">
-            "Thanks to Farmbase, I was able to afford to send my son to Harvard
-            Med"
+            To increase each Filipino's quality of living
           </em>
         </div>
       </div>
@@ -52,12 +49,19 @@ const Landing = () => {
           <h2>Meet the Team</h2>
           <div className="row">
             <div className="col-md-3 col-sm-6 developer">
-              <div className="dev-thumb" />
+              <div
+                className="dev-thumb"
+                style={{
+                  backgroundImage:
+                    "url(https://avatars0.githubusercontent.com/u/11132381?v=4&u=cc9d5b1e9bab9689fa3e9c1f2256536c4efa122c&s=400)",
+                  backgroundSize: "150%"
+                }}
+              />
               <h4>
-                <strong>Developer Name</strong>
+                <strong>Joselie Castañeda</strong>
               </h4>
               <p className="position">
-                <i>position</i>
+                <i>Benevolent Overlord</i>
               </p>
             </div>
             <div className="col-md-3 col-sm-6 developer">
