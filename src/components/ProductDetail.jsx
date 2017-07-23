@@ -50,60 +50,57 @@ class ProductDetail extends Component {
       <div className="product-detail">
         <div className="container">
           <div className="row">
-            <div className="col-md-9">
-              <div className="row">
-                <div className="col-md-5">
-                  /
-                  <div className="product-detail-image">
-                    <img
-                      src={this.props.crops[cropIndex].imgURL}
-                      alt={this.props.crops[cropIndex].name}
-                      className="img-responsive"
+            <div className="col-md-3">
+
+              <div className="product-detail-image">
+                <img
+                  src={this.props.crops[cropIndex].imgURL}
+                  alt={this.props.crops[cropIndex].name}
+                  className="img-responsive"
+                />
+              </div>
+            </div>
+            
+            <div className="col-md-6">
+              <div className="product-detail-summary">
+                <h1 className="pd-title">
+                  {this.props.crops[cropIndex].name}
+                </h1>
+                <p className="pd-price">
+                  ₱{Math.round(
+                    1 / this.props.crops[cropIndex].quantity * 500 * 100
+                  ) / 100}{" "}
+                  bawat nguya
+                </p>
+                <form className="form-inline" onSubmit={this.addToCart}>
+                  <div className="form-group">
+                    <label>Quantity:</label>
+                    <input
+                      type="number"
+                      onChange={this.handleInputChange}
+                      className="form-control"
+                      value={this.state.quantity}
                     />
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-7">
-                <div className="product-detail-summary">
-                  <h1 className="pd-title">
-                    {this.props.crops[cropIndex].name}
-                  </h1>
-                  <p className="pd-price">
-                    ₱{Math.round(
-                      1 / this.props.crops[cropIndex].quantity * 500 * 100
-                    ) / 100}{" "}
-                    bawat nguya
-                  </p>
-                  <form className="form-inline" onSubmit={this.addToCart}>
-                    <div className="form-group">
-                      <label>Quantity:</label>
-                      <input
-                        type="number"
-                        onChange={this.handleInputChange}
-                        className="form-control"
-                        value={this.state.quantity}
-                      />
-                      <button type="submit" className="btn btn-primary">
-                        Add to Cart{" "}
-                      </button>
+                    <button type="submit" className="btn btn-primary">
+                      Add to Cart{" "}
+                    </button>
+                    <div className="link-group">
+                      <Link to="/cart" className="btn btn-primary">Go to Cart</Link>
+                      <Link to="/crops" className="btn btn-default">Back to Shop</Link>
                     </div>
-                  </form>
-                </div>
+                  </div>
+                </form>
               </div>
             </div>
-          </div>
-          <div className="col-md-3">
-            Add cart here...
-            <div>
-              <Link to="/cart">Go to Cart</Link>
+
+            <div className="col-md-3">
+              <Cart />
             </div>
-            <div>
-              <Link to="/crops">Back to Shop</Link>
-            </div>
+          
           </div>
+          </div>
+          
         </div>
-        <Cart />
-      </div>
     );
   }
 }
