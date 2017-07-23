@@ -26,14 +26,10 @@ class Header extends Component {
         <div className="container">
           <div className="navbar-header pull-left">
             <div className="navbar-brand">
-<<<<<<< HEAD
               <Link to="/">
                 <i className="fa fa-free-code-camp" aria-hidden="true" />.
                 Farmbase
               </Link>
-=======
-              <Link to="/"><i className="fa fa-free-code-camp" aria-hidden="true"></i> Farmbase</Link>
->>>>>>> added checkout
             </div>
           </div>
 

@@ -19,7 +19,6 @@ class ProductDetail extends Component {
     this.setState({ quantity: e.target.value });
   };
 
-<<<<<<< HEAD
   addToCart = e => {
     e.preventDefault();
     this.props.addItem(
@@ -29,12 +28,6 @@ class ProductDetail extends Component {
       this.state.lng
     );
   };
-=======
-  addToCart = (e) => {
-    e.preventDefault()
-    this.props.addItem(this.state.name, this.state.quantity)
-  }
->>>>>>> added checkout
 
   render() {
     let cropIndex;
