@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import Tracking from './Tracking'
+import { connect } from 'react-redux'
+import moment from 'moment'
 
 import '../styles/tracking.css'
 
 class ConfirmPurchase extends Component {
-  /* eslint-disable no-undef */
+
   constructor (props) {
+    /* eslint-disable no-undef */
     super(props);
 
     this.state = {
@@ -51,8 +54,14 @@ class ConfirmPurchase extends Component {
             <div className="tracking-contents">
               <h3>Shipment Tracking</h3>
               <hr/>
+              <p><span className='muted'>Customer: </span>&nbsp; Pat Salcedo</p>
+              <p><span className='muted'>Farmer: </span>&nbsp; Juan Dela Cruz</p>
+              <p><span className='muted'>Operating Center: </span>&nbsp; Farmbase - Baguio</p>
+              <p><span className='muted'>ETD: </span>&nbsp; {moment('2017-07-22T23:10:45.361Z').format('LLL')}</p>
+              <p><span className='muted'>ETA: </span>&nbsp; {moment('2017-07-22T24:59:45.361Z').format('LLL')}</p>
+              <hr/>
+              <p><span className='muted'>Current Location: </span>&nbsp; Binan, Laguna</p>
             </div>
-            
           </div>
         </div>
         
@@ -62,4 +71,8 @@ class ConfirmPurchase extends Component {
   
 }
 
-export default ConfirmPurchase
+const mapStateToProps = (state) => ({
+  state: state
+})
+
+export default connect(mapStateToProps)(ConfirmPurchase);
