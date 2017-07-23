@@ -36,6 +36,35 @@ const Landing = () => {
           </div>
         </div>
       </div>
+
+      <div className="meet-the-team text-center">
+        <div className="container">
+          <h2>Meet the Team</h2>
+          <div className="row">
+            <div className="col-md-3 col-sm-6 developer">
+              <div className="dev-thumb"></div>
+              <h4><strong>Developer Name</strong></h4>
+              <p className="position"><i>position</i></p>
+            </div>
+            <div className="col-md-3 col-sm-6 developer">
+              <div className="dev-thumb"></div>
+              <h4><strong>Developer Name</strong></h4>
+              <p className="position"><i>position</i></p>
+            </div>
+            <div className="col-md-3 col-sm-6 developer">
+              <div className="dev-thumb"></div>
+              <h4><strong>Developer Name</strong></h4>
+              <p className="position"><i>position</i></p>
+            </div>
+            <div className="col-md-3 col-sm-6 developer">
+              <div className="dev-thumb" style={{backgroundImage: 'url(https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAA2OAAAAJDBkMTJkNmUzLWNlNjUtNGU2My1hMGZlLWUzYTAxOGI5OTUwZA.jpg)'}} ></div>
+              <h4><strong>Paul Simon Ongpin</strong></h4>
+              <p className="position text-muted"><i>Frontend Web Developer</i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 };

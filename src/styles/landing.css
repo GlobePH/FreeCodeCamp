@@ -76,3 +76,27 @@
     font-weight: bold;
     margin-bottom: 1em;
 }
+
+/* Meet the team ============================== */
+.meet-the-team{
+    padding: 80px 0;
+}
+.meet-the-team h2{
+    margin-top: 0;
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+.dev-thumb{
+    height: 150px;
+    width: 150px;
+    margin: 0 auto 20px;
+    border: 2px solid #00d1b2;
+    border-radius: 50%;
+    transition: all .4s ease-in-out;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.dev-thumb:hover{
+    transform: scale(1.1)
+}
