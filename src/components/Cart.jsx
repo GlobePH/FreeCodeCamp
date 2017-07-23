@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
+import "../styles/cart.css";
+
 class Cart extends Component {
   render() {
     const { cart } = this.props;
@@ -26,7 +28,7 @@ class Cart extends Component {
     }
 
     return (
-      <div style={{ height: "89vh" }}>
+      <div className="cart">
         <h3>Cart Items</h3>
         {cropsItem}
         <Link to="/tracking-purchase">Continue to Checkout</Link>
