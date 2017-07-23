@@ -1,6 +1,6 @@
 /* Banner ============================= */
 .home-banner {
-    height: 500px;
+    min-height: 500px;
     background-color: #ccc;
     background-image: url(./assets/pexels-photo-95425.jpeg);
     background-size: cover;
