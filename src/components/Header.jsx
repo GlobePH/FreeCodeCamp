@@ -55,6 +55,9 @@ class Header extends Component {
                       <li>
                         <a href="/login">Login</a>
                       </li>
+                      <li>
+                        <a href="/tracking-purchase">Track</a>
+                      </li>
                     </ul>
                   </div>
                 : <div className="pull-right">
