@@ -1,8 +1,9 @@
 .tracking-purchase {
   padding-top: 110px;
   padding-bottom: 60px;
+  min-height: 92vh;
 }
-.tracking-map-wrapper{
+.tracking-map-wrapper {
   height: 500px;
 }
 .tracking-map-wrapper > div {
@@ -16,11 +17,11 @@
   padding: 30px 15px;
   margin-top: 0px;
 }
-.tracking-contents h3{
+.tracking-contents h3 {
   margin-top: 0;
 }
-.tracking-contents hr{
-  border-color: #ccc; 
+.tracking-contents hr {
+  border-color: #ccc;
 }
 .muted {
   opacity: 0.5;
