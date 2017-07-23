@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Tracking from './Tracking'
 import { connect } from 'react-redux'
 import moment from 'moment'
+import { firebaseConnect, dataToJS } from "react-redux-firebase";
+import { compose } from "redux";
 
 import '../styles/tracking.css'
 
@@ -11,13 +13,23 @@ class ConfirmPurchase extends Component {
     /* eslint-disable no-undef */
     super(props);
 
+    const { crops, users } = this.props;
+    let latUser = 14.553406
+    let lngUser = 121.0499226
+    let latCrop = 14.5995124
+    let lngCrop = 120.9842195
+
     this.state = {
-      origin: new google.maps.LatLng(41.8507300, -87.6512600),
-      destination: new google.maps.LatLng(41.8525800, -87.6514100),
-      directions: null
+      origin: new google.maps.LatLng(latCrop, lngCrop),
+      destination: new google.maps.LatLng(latUser, lngUser),
+      directions: null,
+      timer: 0,
+      showMessage: false,
+      locations: ['Malate Manila', 'Pasay City', 'Makati City']
     }
+    this.renderDeliver = this.renderDeliver.bind(this);
   }
-  componentDidMount() {
+  componentDidMount () {
     const DirectionsService = new google.maps.DirectionsService();
 
     DirectionsService.route({
@@ -30,9 +42,20 @@ class ConfirmPurchase extends Component {
           directions: result,
         });
       } else {
-        console.error(`error fetching directions ${result}`);
+        console.error(`error fetching directions ${result}`)
       }
     });
+  }
+  renderDeliver () {
+    this.locationInverval = setInterval(() => {
+      this.setState({ timer: this.state.timer++, showMessage: true });
+    }, 5000);
+
+    if (this.state.timer === 3) {
+      clearInterval(this.locationInverval);
+      clearTimeout(this.showOff);
+    }
+
   }
   render () {
     return (
@@ -57,10 +80,10 @@ class ConfirmPurchase extends Component {
               <p><span className='muted'>Customer: </span>&nbsp; Pat Salcedo</p>
               <p><span className='muted'>Farmer: </span>&nbsp; Juan Dela Cruz</p>
               <p><span className='muted'>Operating Center: </span>&nbsp; Farmbase - Baguio</p>
-              <p><span className='muted'>ETD: </span>&nbsp; {moment('2017-07-22T23:10:45.361Z').format('LLL')}</p>
-              <p><span className='muted'>ETA: </span>&nbsp; {moment('2017-07-22T24:59:45.361Z').format('LLL')}</p>
+              <p><span className='muted'>ETD: </span>&nbsp; {moment('2017-07-22T10:10:45.361Z').format('LLL')}</p>
+              <p><span className='muted'>ETA: </span>&nbsp; {moment('2017-07-22T11:59:45.361Z').format('LLL')}</p>
               <hr/>
-              <p><span className='muted'>Current Location: </span>&nbsp; Binan, Laguna</p>
+              <p><span className='muted'>Current Location: </span>&nbsp; Pasay city</p>
             </div>
           </div>
         </div>
@@ -72,7 +95,9 @@ class ConfirmPurchase extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  state: state
+  state: state,
+  crops: dataToJS(state.firebase, 'crops'),
+  users: dataToJS(state.firebase, 'users')
 })
 
-export default connect(mapStateToProps)(ConfirmPurchase);
+export default compose(firebaseConnect(['crops', 'users']),connect(mapStateToProps))(ConfirmPurchase);
