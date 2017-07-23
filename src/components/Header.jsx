@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Logout from "./Logout";
 import { Link } from "react-router-dom";
 import Media from "react-media";
 

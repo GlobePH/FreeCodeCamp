@@ -13,7 +13,6 @@ class ConfirmPurchase extends Component {
     /* eslint-disable no-undef */
     super(props);
 
-    const { crops, users } = this.props;
     let latUser = 14.553406
     let lngUser = 121.0499226
     let latCrop = 14.5995124
