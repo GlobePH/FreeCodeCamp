@@ -26,10 +26,14 @@ class Header extends Component {
         <div className="container">
           <div className="navbar-header pull-left">
             <div className="navbar-brand">
+<<<<<<< HEAD
               <Link to="/">
                 <i className="fa fa-free-code-camp" aria-hidden="true" />.
                 Farmbase
               </Link>
+=======
+              <Link to="/"><i className="fa fa-free-code-camp" aria-hidden="true"></i> Farmbase</Link>
+>>>>>>> added checkout
             </div>
           </div>
 
@@ -53,10 +57,10 @@ class Header extends Component {
                         <Link to="/crops">Crops</Link>
                       </li>
                       <li>
-                        <a href="/login">Login</a>
+                        <Link to="/login">Login</Link>
                       </li>
                       <li>
-                        <a href="/tracking-purchase">Track</a>
+                        <Link to="/tracking-purchase">Track</Link>
                       </li>
                     </ul>
                   </div>

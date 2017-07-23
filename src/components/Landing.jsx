@@ -78,12 +78,18 @@ const Landing = () => {
               </p>
             </div>
             <div className="col-md-3 col-sm-6 developer">
-              <div className="dev-thumb" />
+              <div
+                className="dev-thumb"
+                style={{
+                  backgroundImage:
+                    "url(https://pbs.twimg.com/profile_images/826926990556962818/k0xej8wf_400x400.jpg)"
+                }}
+              />
               <h4>
-                <strong>Developer Name</strong>
+                <strong>Philip Balbas</strong>
               </h4>
               <p className="position">
-                <i>position</i>
+                <i>Reichsmarschall</i>
               </p>
             </div>
             <div className="col-md-3 col-sm-6 developer">
