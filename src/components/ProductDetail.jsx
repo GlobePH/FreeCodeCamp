@@ -63,7 +63,7 @@ class ProductDetail extends Component {
                   ₱{Math.round(
                     1 / this.props.crops[cropIndex].quantity * 500 * 100
                   ) / 100}{" "}
-                  bawat nguya
+                  per piece
                 </p>
                 <form className="form-inline" onSubmit={this.addToCart}>
                   <div className="form-group">
