@@ -31,7 +31,6 @@ class Header extends Component {
                 Farmbase
               </Link>
             </div>
-            <Logout />
           </div>
 
           <Media query="(min-width: 768px)">

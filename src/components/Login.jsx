@@ -11,7 +11,7 @@ class Login extends Component {
       if (user) {
         props.dispatch(loginAction());
       } else {
-        console.error('FAIL');
+        console.error("FAIL");
       }
     });
     this.state = {
@@ -33,7 +33,7 @@ class Login extends Component {
     fbAuth
       .signInWithEmailAndPassword(this.state.userEmail, this.state.userPass)
       .then(() => this.props.dispatch(loginAction()))
-      .catch(error => console.error(error))
+      .catch(error => console.error(error));
   }
 
   render() {
@@ -69,7 +69,7 @@ class Login extends Component {
               </div>
               <button
                 onClick={this.handleLogin.bind(this)}
-                type='submit'
+                type="submit"
                 className="btn btn-default"
               >
                 Login
@@ -82,7 +82,7 @@ class Login extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   state: state
 });
 
