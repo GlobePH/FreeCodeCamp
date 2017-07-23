@@ -11,6 +11,7 @@ import ProductIndex from "./ProductIndex";
 import ProductDetail from "./ProductDetail";
 import Cart from "./Cart";
 import TrackingPurchase from "./TrackingPurchase";
+import Checkout from './Checkout'
 
 import "../styles/index.css";
 
@@ -32,6 +33,7 @@ const App = () =>
         <Route path="/login" component={Login} />
         <Route path="/product" component={ProductIndex} />
         <Route path="/tracking-purchase" component={TrackingPurchase} />
+        <Route path="/checkout" component={Checkout}/>
       </Switch>
       <Footer />
     </div>

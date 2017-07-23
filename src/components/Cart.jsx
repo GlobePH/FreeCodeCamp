@@ -31,7 +31,7 @@ class Cart extends Component {
       <div className="cart">
         <h3>Cart Items</h3>
         {cropsItem}
-        <Link to="/tracking-purchase">Continue to Checkout</Link>
+        <Link to="/checkout">Continue to Checkout</Link>
       </div>
     );
   }
