@@ -1,23 +1,25 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
   return (
-    <div className="container">
+    <div className="container" style={{ minHeight: "75vh", padding: "25vh" }}>
       <div className="row">
         <h1>Checkout Page</h1>
         <div className="col-sm-4">
           <h2>Sign Up</h2>
           <form>
-            <input type="text" value="Enter Your Email Address"/>
-            <input type="password" value="Create Password"/>
-            <input type="checkbox" value="I agree to the Term of Use and Privacy Statement"/>
-            <input type="submit" value="Create Your Account"/>
+            <input type="text" placeholder="Email Address" />
+            <input type="password" placeholder="Password" />
+            <input type="submit" value="Create Your Account" />
           </form>
         </div>
         <div className="col-sm-4">
           <h2>Login</h2>
-          <p>Have an account already? Click here to <Link to="/login">sign in</Link>.</p>
+          <p>
+            Have an account already? Click here to{" "}
+            <Link to="/login">sign in</Link>.
+          </p>
         </div>
         <div className="col-sm-4">
           <h2>Order Summary</h2>
@@ -41,7 +43,7 @@ const Checkout = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Checkout
+export default Checkout;
