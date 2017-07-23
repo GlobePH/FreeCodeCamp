@@ -95,6 +95,7 @@ class ProductDetail extends Component {
             </div>
           </div>
         </div>
+        <Cart />
       </div>
     );
   }
