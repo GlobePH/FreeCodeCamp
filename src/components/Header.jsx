@@ -17,7 +17,6 @@ class Header extends Component {
 
   handleHamburgerClick() {
     this.setState({ mmenuOpen: !this.state.mmenuOpen });
-    console.log(this.state.mmenuOpen);
   }
 
   render() {
