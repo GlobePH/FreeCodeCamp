@@ -57,7 +57,12 @@ class ConfirmPurchase extends Component {
     }
 
   }
-  render () {
+  renderLoading () {
+    return (
+      <p>Loading...</p>
+    )
+  }
+  renderComponent () {
     return (
       <div className='tracking-purchase container'>
         <div className="row">
@@ -87,11 +92,16 @@ class ConfirmPurchase extends Component {
             </div>
           </div>
         </div>
-        
       </div>
     )
   }
-  
+  render () {
+    if (google) {
+      return this.renderComponent();
+    } else {
+      return this.renderLoading();
+    }
+  }
 }
 
 const mapStateToProps = (state) => ({
