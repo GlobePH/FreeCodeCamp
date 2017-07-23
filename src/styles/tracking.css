@@ -22,3 +22,6 @@
 .tracking-contents hr{
   border-color: #ccc; 
 }
+.muted {
+  opacity: 0.5;
+}
