@@ -41,7 +41,8 @@ const Landing = () => {
         <div className="container">
           <h2>Helping Filipino Farmers</h2>
           <em className="quote">
-            "Thanks to Farmbase, my son is now studying Medicine in Harvard"
+            "Thanks to Farmbase, I was able to afford to send my son to Harvard
+            Med"
           </em>
         </div>
       </div>
