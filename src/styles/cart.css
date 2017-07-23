@@ -4,3 +4,10 @@
     background: #f2f2f2;
     border-radius: 10px;
 }
+.cart-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.cart .btn {
+    margin-top: 20px;
+}

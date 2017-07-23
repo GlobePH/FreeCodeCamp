@@ -11,7 +11,7 @@ class Cart extends Component {
 
     if (cart) {
       cropsItem = cart.map(item =>
-        <div>
+        <div className="cart-item">
           <h4>
             Crop Name: <b>{item.name}</b>
           </h4>
@@ -31,7 +31,7 @@ class Cart extends Component {
       <div className="cart">
         <h3>Cart Items</h3>
         {cropsItem}
-        <Link to="/checkout">Continue to Checkout</Link>
+        <Link className="btn btn-primary" to="/tracking-purchase">Continue to Checkout</Link>
       </div>
     );
   }
