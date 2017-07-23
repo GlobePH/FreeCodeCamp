@@ -37,6 +37,15 @@ const Landing = () => {
         </div>
       </div>
 
+      <div className="helping-communities text-center">
+        <div className="container">
+          <h2>Helping Filipino Farmers</h2>
+          <em className="quote">
+            "Thanks to Farmbase, my son is now studying Medicine in Harvard"
+          </em>
+        </div>
+      </div>
+
       <div className="meet-the-team text-center">
         <div className="container">
           <h2>Meet the Team</h2>
